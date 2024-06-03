@@ -16,13 +16,14 @@ install:  ## Install dependencies
 run:  ## Run the Django development server
 	$(PYTHON) manage.py runserver
 
+# Target to create migrations
+migrations:  ## Create new database migrations
+	$(PYTHON) manage.py makemigrations
+
 # Target to run migrations
 migrate:  ## Run database migrations
 	$(PYTHON) manage.py migrate
 
-# Target to create migrations
-makemigrations:  ## Create new database migrations
-	$(PYTHON) manage.py makemigrations
 
 format:  ## Run black to format code
 	poetry run black .
