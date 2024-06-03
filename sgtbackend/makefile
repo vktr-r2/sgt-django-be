@@ -24,8 +24,13 @@ migrate:  ## Run database migrations
 makemigrations:  ## Create new database migrations
 	$(PYTHON) manage.py makemigrations
 
-lint:
+format:  ## Run black to format code
+	poetry run black .
+
+lint:  ## Run flake8 to check code quality
 	poetry run flake8 .
+
+quality: format lint  ## Run both black and flake8
 
 # # Target to run tests
 # test:  ## Run tests

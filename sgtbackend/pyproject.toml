@@ -5,12 +5,33 @@ description = ""
 authors = ["Viktor R <122321007+vktr-r2@users.noreply.github.com>"]
 readme = "README.md"
 
+
 [tool.poetry.dependencies]
 python = "^3.12"
 
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^7.0.0"
+black = "^24.4.2"
+
+
+[tool.black]
+line-length = 120
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
 
 [build-system]
 requires = ["poetry-core"]
