@@ -24,6 +24,9 @@ migrate:  ## Run database migrations
 makemigrations:  ## Create new database migrations
 	$(PYTHON) manage.py makemigrations
 
+lint:
+	poetry run flake8 .
+
 # # Target to run tests
 # test:  ## Run tests
 # 	poetry run pytest
