@@ -1,0 +1,418 @@
+[
+    {
+      "model": "rough_picks.matchpicks",
+      "pk": 1,
+      "fields": {
+        "user_id": 1,
+        "tournament_id": 1,
+        "golfer_id": 1,
+        "priority": 1,
+        "drafted": true,
+        "created_at": "2024-06-03T00:00:00Z",
+        "updated_at": "2024-06-03T00:00:00Z"
+      }
+    },
+    {
+      "model": "rough_picks.matchpicks",
+      "pk": 2,
+      "fields": {
+        "user_id": 1,
+        "tournament_id": 1,
+        "golfer_id": 2,
+        "priority": 2,
+        "drafted": true,
+        "created_at": "2024-06-03T00:00:00Z",
+        "updated_at": "2024-06-03T00:00:00Z"
+      }
+    },
+    {
+      "model": "rough_picks.matchpicks",
+      "pk": 3,
+      "fields": {
+        "user_id": 1,
+        "tournament_id": 1,
+        "golfer_id": 3,
+        "priority": 3,
+        "drafted": false,
+        "created_at": "2024-06-03T00:00:00Z",
+        "updated_at": "2024-06-03T00:00:00Z"
+      }
+    },
+    {
+      "model": "rough_picks.matchpicks",
+      "pk": 4,
+      "fields": {
+        "user_id": 1,
+        "tournament_id": 1,
+        "golfer_id": 4,
+        "priority": 4,
+        "drafted": false,
+        "created_at": "2024-06-03T00:00:00Z",
+        "updated_at": "2024-06-03T00:00:00Z"
+      }
+    },
+    {
+      "model": "rough_picks.matchpicks",
+      "pk": 5,
+      "fields": {
+        "user_id": 1,
+        "tournament_id": 1,
+        "golfer_id": 5,
+        "priority": 5,
+        "drafted": false,
+        "created_at": "2024-06-03T00:00:00Z",
+        "updated_at": "2024-06-03T00:00:00Z"
+      }
+    },
+    {
+      "model": "rough_picks.matchpicks",
+      "pk": 6,
+      "fields": {
+        "user_id": 1,
+        "tournament_id": 1,
+        "golfer_id": 6,
+        "priority": 6,
+        "drafted": false,
+        "created_at": "2024-06-03T00:00:00Z",
+        "updated_at": "2024-06-03T00:00:00Z"
+      }
+    },
+    {
+      "model": "rough_picks.matchpicks",
+      "pk": 7,
+      "fields": {
+        "user_id": 1,
+        "tournament_id": 1,
+        "golfer_id": 7,
+        "priority": 7,
+        "drafted": false,
+        "created_at": "2024-06-03T00:00:00Z",
+        "updated_at": "2024-06-03T00:00:00Z"
+      }
+    },
+    {
+      "model": "rough_picks.matchpicks",
+      "pk": 8,
+      "fields": {
+        "user_id": 1,
+        "tournament_id": 1,
+        "golfer_id": 8,
+        "priority": 8,
+        "drafted": false,
+        "created_at": "2024-06-03T00:00:00Z",
+        "updated_at": "2024-06-03T00:00:00Z"
+      }
+    },
+    {
+      "model": "rough_picks.matchpicks",
+      "pk": 9,
+      "fields": {
+        "user_id": 2,
+        "tournament_id": 1,
+        "golfer_id": 9,
+        "priority": 1,
+        "drafted": true,
+        "created_at": "2024-06-03T00:00:00Z",
+        "updated_at": "2024-06-03T00:00:00Z"
+      }
+    },
+    {
+        "model": "rough_picks.matchpicks",
+        "pk": 10,
+        "fields": {
+          "user_id": 2,
+          "tournament_id": 1,
+          "golfer_id": 10,
+          "priority": 2,
+          "drafted": true,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 11,
+        "fields": {
+          "user_id": 2,
+          "tournament_id": 1,
+          "golfer_id": 1,
+          "priority": 3,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 12,
+        "fields": {
+          "user_id": 2,
+          "tournament_id": 1,
+          "golfer_id": 2,
+          "priority": 4,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 13,
+        "fields": {
+          "user_id": 2,
+          "tournament_id": 1,
+          "golfer_id": 3,
+          "priority": 5,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 14,
+        "fields": {
+          "user_id": 2,
+          "tournament_id": 1,
+          "golfer_id": 4,
+          "priority": 6,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 15,
+        "fields": {
+          "user_id": 2,
+          "tournament_id": 1,
+          "golfer_id": 5,
+          "priority": 7,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 16,
+        "fields": {
+          "user_id": 2,
+          "tournament_id": 1,
+          "golfer_id": 6,
+          "priority": 8,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 17,
+        "fields": {
+          "user_id": 3,
+          "tournament_id": 1,
+          "golfer_id": 7,
+          "priority": 1,
+          "drafted": true,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 18,
+        "fields": {
+          "user_id": 3,
+          "tournament_id": 1,
+          "golfer_id": 8,
+          "priority": 2,
+          "drafted": true,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 19,
+        "fields": {
+          "user_id": 3,
+          "tournament_id": 1,
+          "golfer_id": 9,
+          "priority": 3,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 20,
+        "fields": {
+          "user_id": 3,
+          "tournament_id": 1,
+          "golfer_id": 10,
+          "priority": 4,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 21,
+        "fields": {
+          "user_id": 3,
+          "tournament_id": 1,
+          "golfer_id": 1,
+          "priority": 5,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 22,
+        "fields": {
+          "user_id": 3,
+          "tournament_id": 1,
+          "golfer_id": 2,
+          "priority": 6,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 23,
+        "fields": {
+          "user_id": 3,
+          "tournament_id": 1,
+          "golfer_id": 3,
+          "priority": 7,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 24,
+        "fields": {
+          "user_id": 3,
+          "tournament_id": 1,
+          "golfer_id": 4,
+          "priority": 8,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 25,
+        "fields": {
+          "user_id": 4,
+          "tournament_id": 1,
+          "golfer_id": 5,
+          "priority": 1,
+          "drafted": true,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 26,
+        "fields": {
+          "user_id": 4,
+          "tournament_id": 1,
+          "golfer_id": 6,
+          "priority": 2,
+          "drafted": true,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 27,
+        "fields": {
+          "user_id": 4,
+          "tournament_id": 1,
+          "golfer_id": 7,
+          "priority": 3,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 28,
+        "fields": {
+          "user_id": 4,
+          "tournament_id": 1,
+          "golfer_id": 8,
+          "priority": 4,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 29,
+        "fields": {
+          "user_id": 4,
+          "tournament_id": 1,
+          "golfer_id": 9,
+          "priority": 5,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 30,
+        "fields": {
+          "user_id": 4,
+          "tournament_id": 1,
+          "golfer_id": 10,
+          "priority": 6,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 31,
+        "fields": {
+          "user_id": 4,
+          "tournament_id": 1,
+          "golfer_id": 1,
+          "priority": 7,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      },
+      {
+        "model": "rough_picks.matchpicks",
+        "pk": 32,
+        "fields": {
+          "user_id": 4,
+          "tournament_id": 1,
+          "golfer_id": 2,
+          "priority": 8,
+          "drafted": false,
+          "created_at": "2024-06-03T00:00:00Z",
+          "updated_at": "2024-06-03T00:00:00Z"
+        }
+      }
+  ]
