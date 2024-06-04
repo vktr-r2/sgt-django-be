@@ -40,6 +40,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "grounds_crew",
+    "rough_picks",
     "call_caddy",
     "scorecard",
     "django.contrib.admin",
