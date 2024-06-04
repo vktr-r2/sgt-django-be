@@ -1,0 +1,50 @@
+[
+    {
+        "model": "scorecard.matchresult",
+        "pk": 1,
+        "fields": {
+            "tournament_id": 1,
+            "user_id": 1,
+            "total_score": 567,
+            "place": 1,
+            "winner_picked": true,
+            "cuts_missed": null
+        }
+    },
+    {
+        "model": "scorecard.matchresult",
+        "pk": 2,
+        "fields": {
+            "tournament_id": 1,
+            "user_id": 2,
+            "total_score": 567,
+            "place": 2,
+            "winner_picked": false,
+            "cuts_missed": null
+        }
+    },
+    {
+        "model": "scorecard.matchresult",
+        "pk": 3,
+        "fields": {
+            "tournament_id": 1,
+            "user_id": 3,
+            "total_score": 567,
+            "place": 3,
+            "winner_picked": false,
+            "cuts_missed": 1
+        }
+    },
+    {
+        "model": "scorecard.matchresult",
+        "pk": 4,
+        "fields": {
+            "tournament_id": 1,
+            "user_id": 4,
+            "total_score": 567,
+            "place": 4,
+            "winner_picked": false,
+            "cuts_missed": 2
+        }
+    }
+]

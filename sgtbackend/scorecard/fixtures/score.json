@@ -1,0 +1,290 @@
+[
+    {
+        "model": "scorecard.score",
+        "pk": 1,
+        "fields": {
+            "match_picks_id": 1,
+            "score": 72,
+            "round": 1
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 2,
+        "fields": {
+            "match_picks_id": 1,
+            "score": 72,
+            "round": 2
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 3,
+        "fields": {
+            "match_picks_id": 1,
+            "score": 72,
+            "round": 3
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 4,
+        "fields": {
+            "match_picks_id": 1,
+            "score": 72,
+            "round": 4
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 5,
+        "fields": {
+            "match_picks_id": 2,
+            "score": 72,
+            "round": 1
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 6,
+        "fields": {
+            "match_picks_id": 2,
+            "score": 72,
+            "round": 2
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 7,
+        "fields": {
+            "match_picks_id": 2,
+            "score": 72,
+            "round": 3
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 8,
+        "fields": {
+            "match_picks_id": 2,
+            "score": 72,
+            "round": 4
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 9,
+        "fields": {
+            "match_picks_id": 9,
+            "score": 72,
+            "round": 1
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 10,
+        "fields": {
+            "match_picks_id": 9,
+            "score": 72,
+            "round": 2
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 11,
+        "fields": {
+            "match_picks_id": 9,
+            "score": 72,
+            "round": 3
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 12,
+        "fields": {
+            "match_picks_id": 9,
+            "score": 72,
+            "round": 4
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 13,
+        "fields": {
+            "match_picks_id": 10,
+            "score": 72,
+            "round": 1
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 14,
+        "fields": {
+            "match_picks_id": 10,
+            "score": 72,
+            "round": 2
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 15,
+        "fields": {
+            "match_picks_id": 10,
+            "score": 72,
+            "round": 3
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 16,
+        "fields": {
+            "match_picks_id": 10,
+            "score": 72,
+            "round": 4
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 17,
+        "fields": {
+            "match_picks_id": 17,
+            "score": 72,
+            "round": 1
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 18,
+        "fields": {
+            "match_picks_id": 17,
+            "score": 72,
+            "round": 2
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 19,
+        "fields": {
+            "match_picks_id": 17,
+            "score": 72,
+            "round": 3
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 20,
+        "fields": {
+            "match_picks_id": 17,
+            "score": 72,
+            "round": 4
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 21,
+        "fields": {
+            "match_picks_id": 18,
+            "score": 72,
+            "round": 1
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 22,
+        "fields": {
+            "match_picks_id": 18,
+            "score": 72,
+            "round": 2
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 23,
+        "fields": {
+            "match_picks_id": 18,
+            "score": 72,
+            "round": 3
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 24,
+        "fields": {
+            "match_picks_id": 18,
+            "score": 72,
+            "round": 4
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 25,
+        "fields": {
+            "match_picks_id": 25,
+            "score": 72,
+            "round": 1
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 26,
+        "fields": {
+            "match_picks_id": 25,
+            "score": 72,
+            "round": 2
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 27,
+        "fields": {
+            "match_picks_id": 25,
+            "score": 72,
+            "round": 3
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 28,
+        "fields": {
+            "match_picks_id": 25,
+            "score": 72,
+            "round": 4
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 29,
+        "fields": {
+            "match_picks_id": 26,
+            "score": 72,
+            "round": 1
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 30,
+        "fields": {
+            "match_picks_id": 26,
+            "score": 72,
+            "round": 2
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 31,
+        "fields": {
+            "match_picks_id": 26,
+            "score": 72,
+            "round": 3
+        }
+    },
+    {
+        "model": "scorecard.score",
+        "pk": 32,
+        "fields": {
+            "match_picks_id": 26,
+            "score": 72,
+            "round": 4
+        }
+    }
+]

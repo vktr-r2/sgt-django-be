@@ -1,2 +1,2 @@
-from .tournaments import Tournament
-from .golfers import Golfer
+from .tournament import Tournament
+from .golfer import Golfer
