@@ -9,5 +9,14 @@ class Golfer(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        db_table = 'golfer'
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.created_at = timezone.now()
+        self.updated_at = timezone.now()
+        return super(Golfer, self).save(*args, **kwargs)
+
     def __str__(self):
         return f"{self.f_name} {self.l_name}"

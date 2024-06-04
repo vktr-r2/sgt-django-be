@@ -12,13 +12,14 @@ class MatchPick(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
-    # class Meta:
-    #     db_table = 'match_pick'
-    #     indexes = [
-    #         models.Index(fields=['user']),
-    #         models.Index(fields=['tournament']),
-    #         models.Index(fields=['golfer']),
-    #     ]
+    class Meta:
+        db_table = 'match_pick'
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.created_at = timezone.now()
+        self.updated_at = timezone.now()
+        return super(MatchPick, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"MatchPick({self.user}, {self.tournament}, {self.golfer}, {self.priority})"

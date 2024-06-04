@@ -10,11 +10,14 @@ class Score(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
-    # class Meta:
-    #     db_table = 'score'
-    #     indexes = [
-    #         models.Index(fields=['match_pick_id']),
-    #     ]
+    class Meta:
+        db_table = 'score'
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.created_at = timezone.now()
+        self.updated_at = timezone.now()
+        return super(Score, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"Score {self.id}: {self.score} for round {self.round}"

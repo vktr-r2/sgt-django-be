@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Tournament(models.Model):
@@ -15,6 +16,15 @@ class Tournament(models.Model):
     major_championship = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'tournament'
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.created_at = timezone.now()
+        self.updated_at = timezone.now()
+        return super(Tournament, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.name} ({self.year})"

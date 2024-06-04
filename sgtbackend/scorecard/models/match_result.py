@@ -14,12 +14,14 @@ class MatchResult(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
-    # class Meta:
-    #     db_table = 'match_result'
-    #     indexes = [
-    #         models.Index(fields=['tournament_id']),
-    #         models.Index(fields=['user_id']),
-    #     ]
+    class Meta:
+        db_table = 'match_result'
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.created_at = timezone.now()
+        self.updated_at = timezone.now()
+        return super(MatchResult, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"Match Result {self.id}: User {self.user_id} in Tournament {self.tournament_id}"
