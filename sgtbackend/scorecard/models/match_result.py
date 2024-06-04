@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils import timezone
 from call_caddy.models import Tournament
+from grounds_crew.models import User
 
 
 class MatchResult(models.Model):
     tournament_id = models.ForeignKey(Tournament, on_delete=models.CASCADE, db_index=True)
-    user_id = models.ForeignKey('User', on_delete=models.CASCADE, db_index=True)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, db_index=True)
     total_score = models.IntegerField()
     place = models.IntegerField()
     winner_picked = models.BooleanField(default=False)

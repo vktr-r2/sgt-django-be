@@ -1,9 +1,10 @@
 from django.db import models
 from django.utils import timezone
+from rough_picks.models import MatchPick
 
 
 class Score(models.Model):
-    match_picks_id = models.ForeignKey('MatchPicks', on_delete=models.CASCADE, db_index=True)
+    match_picks_id = models.ForeignKey(MatchPick, on_delete=models.CASCADE, db_index=True)
     score = models.IntegerField(null=True, blank=True)
     round = models.IntegerField()
     created_at = models.DateTimeField(default=timezone.now)
