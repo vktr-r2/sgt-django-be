@@ -33,6 +33,6 @@ lint:  ## Run flake8 to check code quality
 
 quality: format lint  ## Run both black and flake8
 
-# # Target to run tests
-# test:  ## Run tests
-# 	poetry run pytest
+# Target to run tests
+test:  ## Run tests
+	poetry run pytest -v
