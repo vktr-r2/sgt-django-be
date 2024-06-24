@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from rough_picks.models import MatchPick
+from rough_draft.models import MatchPick
 
 
 class Score(models.Model):

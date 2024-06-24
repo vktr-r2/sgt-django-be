@@ -41,7 +41,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "grounds_crew",
-    "rough_picks",
+    "rough_draft",
     "call_caddy",
     "scorecard",
     "django.contrib.admin",
