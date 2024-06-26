@@ -10,7 +10,7 @@ help:  ## Show this help
 
 # Target to install dependencies
 install:  ## Install dependencies
-	poetry install
+	poetry install --no-root
 
 # Target to run the Django server
 run:  ## Run the Django development server
