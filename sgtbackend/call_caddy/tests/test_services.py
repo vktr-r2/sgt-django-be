@@ -133,6 +133,59 @@ class TestScheduleCallService(unittest.TestCase):
         response = self.service.get_schedule("1")
         self.assertIsNone(response)
 
+#################################################################
+
+class TestTournamentCallService(unittest.TestCase):
+
+    @patch.dict(os.environ, {"RAPID_API_KEY": "fake_api_key"})
+    def setUp(self):
+        self.service = TournamentCallService()
+
+    @requests_mock.Mocker()
+    def test_get_tournament(self, mocker):
+        current_year = str(datetime.now().year)
+        tourn_id = "475"
+        mock_tourney = {
+            "_id": "64fbe447235ac8857ff92842",
+            "orgId": "1",
+            "year": "2024",
+            "tournId": "475",
+            "name": "Valspar Championship",
+            "date": {
+                "start": "2024-03-21T00:00:00Z",
+                "end": "2024-03-24T00:00:00Z",
+                "weekNumber": "12"
+            },
+            "format": "stroke",
+            "status": "Official",
+            "timeZone": "America/New_York",
+            "players": [
+                {
+                "lastName": "Malnati",
+                "firstName": "Peter",
+                "playerId": "34466",
+                "courseId": "665",
+                "status": "complete",
+                "isAmateur": False
+                },
+            ],
+            "timestamp": "2024-03-24T22:35:04.49Z"
+            }
+        
+        # Mock successful tourney GET
+        mocker.get(
+            f"https://live-golf-data.p.rapidapi.com/tournament?orgID=1&year={current_year}&tourn_id={tourn_id}",
+            json=mock_tourney,
+            status_code=200
+        )
+         # Call get_tournament
+        response = self.service.get_tournament("1", "475")
+
+        # Assert
+        self.assertIsNotNone(response)
+        self.assertEqual(response, mock_tourney)
+        
+
 
 if __name__ == "__main__":
     unittest.main()
