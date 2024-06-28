@@ -158,18 +158,7 @@ class TestTournamentCallService(unittest.TestCase):
             },
             "format": "stroke",
             "status": "Official",
-            "timeZone": "America/New_York",
-            "players": [
-                {
-                "lastName": "Malnati",
-                "firstName": "Peter",
-                "playerId": "34466",
-                "courseId": "665",
-                "status": "complete",
-                "isAmateur": False
-                },
-            ],
-            "timestamp": "2024-03-24T22:35:04.49Z"
+            "timeZone": "America/New_York"
             }
         
         # Mock successful tourney GET
@@ -184,6 +173,32 @@ class TestTournamentCallService(unittest.TestCase):
         # Assert
         self.assertIsNotNone(response)
         self.assertEqual(response, mock_tourney)
+
+
+    @requests_mock.Mocker()
+    def test_get_schedule_http_error(self, mocker):
+        current_year = str(datetime.now().year)
+        tourn_id = "475"
+        mocker.get(
+            f"https://live-golf-data.p.rapidapi.com/tournament?orgID=1&year={current_year}&tourn_id={tourn_id}",
+            status_code=404
+        )
+            
+        response = self.service.get_tournament("1", "475")
+        self.assertIsNone(response)
+
+
+    @requests_mock.Mocker()
+    def test_get_schedule_connection_error(self, mocker):
+        current_year = str(datetime.now().year)
+        tourn_id = "475"
+        mocker.get(
+            f"https://live-golf-data.p.rapidapi.com/tournament?orgID=1&year={current_year}&tourn_id={tourn_id}",
+            status_code=404
+        )
+            
+        response = self.service.get_tournament("1", "475")
+        self.assertIsNone(response)
         
 
 
