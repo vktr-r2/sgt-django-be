@@ -15,7 +15,7 @@ class MatchResult(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'match_result'
+        db_table = "match_result"
 
     def save(self, *args, **kwargs):
         if not self.id:

@@ -1,6 +1,7 @@
 from datetime import datetime
 from .rapid_api_wrapper import RapidApiWrapperService
 
+
 class TournamentCallService:
 
     def __init__(self):

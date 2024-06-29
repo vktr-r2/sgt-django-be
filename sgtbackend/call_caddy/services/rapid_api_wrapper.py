@@ -6,6 +6,7 @@ from requests.exceptions import HTTPError, ConnectionError, Timeout, RequestExce
 
 logger = logging.getLogger("call_caddy")
 
+
 class RapidApiWrapperService:
 
     def __init__(self):
@@ -15,7 +16,7 @@ class RapidApiWrapperService:
             "X-RapidAPI-Key": self.rapid_api_key,
             "X-RapidAPI-Host": "live-golf-data.p.rapidapi.com",
         }
-    
+
     # Base authenticated API call function
     def make_request(self, url_path, params=None):
         full_url = f"{self.base_url}{url_path}"
@@ -24,7 +25,7 @@ class RapidApiWrapperService:
             response = requests.get(full_url, headers=self.headers, params=params)
             response.raise_for_status()
             return response.json()
-        
+
         except HTTPError as http_err:
             logger.error(f"HTTP error occurred: {http_err}")
         except ConnectionError as conn_err:

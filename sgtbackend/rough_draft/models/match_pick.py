@@ -3,17 +3,18 @@ from django.utils import timezone
 from call_caddy.models import Tournament, Golfer
 from grounds_crew.models import User
 
+
 class MatchPick(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='match_pick')
-    tournament = models.ForeignKey(Tournament, on_delete=models.CASCADE, related_name='match_pick')
-    golfer = models.ForeignKey(Golfer, on_delete=models.CASCADE, related_name='match_pick')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="match_pick")
+    tournament = models.ForeignKey(Tournament, on_delete=models.CASCADE, related_name="match_pick")
+    golfer = models.ForeignKey(Golfer, on_delete=models.CASCADE, related_name="match_pick")
     priority = models.IntegerField()
     drafted = models.BooleanField(default=False)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'match_pick'
+        db_table = "match_pick"
 
     def save(self, *args, **kwargs):
         if not self.id:

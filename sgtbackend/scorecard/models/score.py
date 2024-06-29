@@ -11,7 +11,7 @@ class Score(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'score'
+        db_table = "score"
 
     def save(self, *args, **kwargs):
         if not self.id:

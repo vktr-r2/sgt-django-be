@@ -2,6 +2,7 @@ from django.db import models
 import uuid
 from django.utils import timezone
 
+
 class User(models.Model):
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     email = models.EmailField(max_length=40, unique=True)
@@ -13,7 +14,7 @@ class User(models.Model):
     updated_at = models.DateTimeField(default=timezone.now)
 
     class Meta:
-        db_table = 'user'
+        db_table = "user"
 
     def save(self, *args, **kwargs):
         if not self.id:

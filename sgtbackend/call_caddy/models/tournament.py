@@ -18,7 +18,7 @@ class Tournament(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'tournament'
+        db_table = "tournament"
 
     def save(self, *args, **kwargs):
         if not self.id:

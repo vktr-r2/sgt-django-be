@@ -10,7 +10,7 @@ class Golfer(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'golfer'
+        db_table = "golfer"
 
     def save(self, *args, **kwargs):
         if not self.id:
