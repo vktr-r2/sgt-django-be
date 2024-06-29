@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("rough_picks", "0001_initial"),
+        ("rough_draft", "0001_initial"),
     ]
 
     operations = [

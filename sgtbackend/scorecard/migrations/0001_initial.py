@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     dependencies = [
         ("call_caddy", "0001_initial"),
         ("grounds_crew", "0001_initial"),
-        ("rough_picks", "0001_initial"),
+        ("rough_draft", "0001_initial"),
     ]
 
     operations = [
@@ -43,7 +43,7 @@ class Migration(migrations.Migration):
                 ("updated_at", models.DateTimeField(auto_now=True)),
                 (
                     "match_picks_id",
-                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="rough_picks.matchpick"),
+                    models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="rough_draft.matchpick"),
                 ),
             ],
         ),
