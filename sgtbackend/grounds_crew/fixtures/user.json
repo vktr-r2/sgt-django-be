@@ -1,6 +1,6 @@
 [
     {
-      "model": "grounds_crew.users",
+      "model": "grounds_crew.user",
       "pk": 1,
       "fields": {
         "uuid": "1b34eb5d-3228-41d5-ac50-46101055cb76",
@@ -14,7 +14,7 @@
       }
     },
     {
-      "model": "grounds_crew.users",
+      "model": "grounds_crew.user",
       "pk": 2,
       "fields": {
         "uuid": "0050425f-bc3f-43e8-9f49-08f8293c5730",
@@ -28,7 +28,7 @@
       }
     },
     {
-      "model": "grounds_crew.users",
+      "model": "grounds_crew.user",
       "pk": 3,
       "fields": {
         "uuid": "421e26c8-eb99-416a-853f-657df9b8f778",
@@ -42,7 +42,7 @@
       }
     },
     {
-      "model": "grounds_crew.users",
+      "model": "grounds_crew.user",
       "pk": 4,
       "fields": {
         "uuid": "a8b906af-74c3-4163-b7ad-a4a65749effa",

@@ -1,6 +1,6 @@
 [
     {
-      "model": "rough_draft.matchpicks",
+      "model": "rough_draft.matchpick",
       "pk": 1,
       "fields": {
         "user_id": 1,
@@ -13,7 +13,7 @@
       }
     },
     {
-      "model": "rough_draft.matchpicks",
+      "model": "rough_draft.matchpick",
       "pk": 2,
       "fields": {
         "user_id": 1,
@@ -26,7 +26,7 @@
       }
     },
     {
-      "model": "rough_draft.matchpicks",
+      "model": "rough_draft.matchpick",
       "pk": 3,
       "fields": {
         "user_id": 1,
@@ -39,7 +39,7 @@
       }
     },
     {
-      "model": "rough_draft.matchpicks",
+      "model": "rough_draft.matchpick",
       "pk": 4,
       "fields": {
         "user_id": 1,
@@ -52,7 +52,7 @@
       }
     },
     {
-      "model": "rough_draft.matchpicks",
+      "model": "rough_draft.matchpick",
       "pk": 5,
       "fields": {
         "user_id": 1,
@@ -65,7 +65,7 @@
       }
     },
     {
-      "model": "rough_draft.matchpicks",
+      "model": "rough_draft.matchpick",
       "pk": 6,
       "fields": {
         "user_id": 1,
@@ -78,7 +78,7 @@
       }
     },
     {
-      "model": "rough_draft.matchpicks",
+      "model": "rough_draft.matchpick",
       "pk": 7,
       "fields": {
         "user_id": 1,
@@ -91,7 +91,7 @@
       }
     },
     {
-      "model": "rough_draft.matchpicks",
+      "model": "rough_draft.matchpick",
       "pk": 8,
       "fields": {
         "user_id": 1,
@@ -104,7 +104,7 @@
       }
     },
     {
-      "model": "rough_draft.matchpicks",
+      "model": "rough_draft.matchpick",
       "pk": 9,
       "fields": {
         "user_id": 2,
@@ -117,7 +117,7 @@
       }
     },
     {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 10,
         "fields": {
           "user_id": 2,
@@ -130,7 +130,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 11,
         "fields": {
           "user_id": 2,
@@ -143,7 +143,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 12,
         "fields": {
           "user_id": 2,
@@ -156,7 +156,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 13,
         "fields": {
           "user_id": 2,
@@ -169,7 +169,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 14,
         "fields": {
           "user_id": 2,
@@ -182,7 +182,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 15,
         "fields": {
           "user_id": 2,
@@ -195,7 +195,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 16,
         "fields": {
           "user_id": 2,
@@ -208,7 +208,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 17,
         "fields": {
           "user_id": 3,
@@ -221,7 +221,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 18,
         "fields": {
           "user_id": 3,
@@ -234,7 +234,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 19,
         "fields": {
           "user_id": 3,
@@ -247,7 +247,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 20,
         "fields": {
           "user_id": 3,
@@ -260,7 +260,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 21,
         "fields": {
           "user_id": 3,
@@ -273,7 +273,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 22,
         "fields": {
           "user_id": 3,
@@ -286,7 +286,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 23,
         "fields": {
           "user_id": 3,
@@ -299,7 +299,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 24,
         "fields": {
           "user_id": 3,
@@ -312,7 +312,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 25,
         "fields": {
           "user_id": 4,
@@ -325,7 +325,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 26,
         "fields": {
           "user_id": 4,
@@ -338,7 +338,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 27,
         "fields": {
           "user_id": 4,
@@ -351,7 +351,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 28,
         "fields": {
           "user_id": 4,
@@ -364,7 +364,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 29,
         "fields": {
           "user_id": 4,
@@ -377,7 +377,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 30,
         "fields": {
           "user_id": 4,
@@ -390,7 +390,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 31,
         "fields": {
           "user_id": 4,
@@ -403,7 +403,7 @@
         }
       },
       {
-        "model": "rough_draft.matchpicks",
+        "model": "rough_draft.matchpick",
         "pk": 32,
         "fields": {
           "user_id": 4,

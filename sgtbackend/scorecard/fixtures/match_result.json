@@ -8,7 +8,9 @@
             "total_score": 567,
             "place": 1,
             "winner_picked": true,
-            "cuts_missed": null
+            "cuts_missed": null,
+            "created_at": "2023-03-01T00:00:00Z",
+            "updated_at": "2023-03-01T00:00:00Z"
         }
     },
     {
@@ -20,7 +22,9 @@
             "total_score": 567,
             "place": 2,
             "winner_picked": false,
-            "cuts_missed": null
+            "cuts_missed": null,
+            "created_at": "2023-03-01T00:00:00Z",
+            "updated_at": "2023-03-01T00:00:00Z"
         }
     },
     {
@@ -32,7 +36,9 @@
             "total_score": 567,
             "place": 3,
             "winner_picked": false,
-            "cuts_missed": 1
+            "cuts_missed": 1,
+            "created_at": "2023-03-01T00:00:00Z",
+            "updated_at": "2023-03-01T00:00:00Z"
         }
     },
     {
@@ -44,7 +50,9 @@
             "total_score": 567,
             "place": 4,
             "winner_picked": false,
-            "cuts_missed": 2
+            "cuts_missed": 2,
+            "created_at": "2023-03-01T00:00:00Z",
+            "updated_at": "2023-03-01T00:00:00Z"
         }
     }
 ]
