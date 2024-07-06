@@ -3,6 +3,14 @@ from call_caddy.models.tournament import Tournament
 from django.utils.dateparse import parse_datetime
 
 class ScheduleSerializer(serializers.ModelSerializer):
+    source_id = serializers.CharField()
+    name = serializers.CharField()
+    year = serializers.IntegerField()
+    start_date = serializers.DateTimeField()
+    end_date = serializers.DateTimeField()
+    week_number = serializers.IntegerField()
+    format = serializers.CharField()
+
     class Meta:
         model = Tournament
         fields = ["source_id", "name", "year", "start_date", "end_date", "week_number", "format"]   # These are the only fields we need from /schedule endpoint
@@ -15,7 +23,7 @@ def insert_schedule_data(response):
             "year": int((response["year"])),
             "start_date": parse_datetime(tournament_data["date"]["start"]),
             "end_date": parse_datetime(tournament_data["date"]["end"]),
-            "week_number": int(tournament_data["date"]["weekNumber"]),
+            "week_number": tournament_data["date"]["weekNumber"],
             "format": tournament_data["format"]
         }
 

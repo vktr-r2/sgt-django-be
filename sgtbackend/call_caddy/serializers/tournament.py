@@ -4,6 +4,12 @@ from call_caddy.helpers.evaluate_major_championship import is_major
 
 
 class TournamentSerializer(serializers.ModelSerializer):
+    golf_course = serializers.CharField()
+    location = serializers.JSONField()
+    par = serializers.IntegerField()
+    time_zone = serializers.CharField()
+    major_championship = serializers.BooleanField()
+    
     class Meta:
         model = Tournament
         fields = ["golf_course", "location", "par", "time_zone", "major_championship"]  # These are the only fields we need from /tournament endpoint
