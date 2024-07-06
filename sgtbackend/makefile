@@ -25,6 +25,9 @@ migrate:  ## Run database migrations
 	$(PYTHON) manage.py migrate
 
 
+fixtures: ## INSERT fixture dummy data
+	$(PYTHON) manage.py loaddata golfer.json tournament.json user.json match_pick.json score.json match_result.json
+
 format:  ## Run black to format code
 	poetry run black .
 

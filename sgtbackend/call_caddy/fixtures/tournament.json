@@ -7,7 +7,11 @@
             "name": "THE PLAYERS Championship",
             "year": "2024",
             "golf_course": "TPC Sawgrass (THE PLAYERS Stadium Course)",
-            "location": "FL, USA",
+            "location": {
+                "city": "Tampa Bay",
+                "state": "Florida",
+                "country": "US"
+            },
             "par": 72,
             "start_date": "2024-03-17T00:00:00Z",
             "end_date": "2024-03-20T23:59:59Z",
@@ -26,7 +30,11 @@
             "name": "The Masters Tournament",
             "year": "2024",
             "golf_course": "Augusta National Golf Club",
-            "location": "GA, USA",
+            "location": {
+                "city": "Augusta",
+                "state": "Georgia",
+                "country": "US"
+            },
             "par": 72,
             "start_date": "2024-04-06T00:00:00Z",
             "end_date": "2024-04-09T23:59:59Z",
