@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import Tournament
+from call_caddy.models.tournament import Tournament
 from django.utils.dateparse import parse_datetime
 
 class ScheduleSerializer(serializers.ModelSerializer):
@@ -12,10 +12,10 @@ def insert_schedule_data(response):
         tournament = {
             "source_id": tournament_data["tournId"],
             "name": tournament_data["name"],
-            "year": response["year"],
+            "year": int((response["year"])),
             "start_date": parse_datetime(tournament_data["date"]["start"]),
             "end_date": parse_datetime(tournament_data["date"]["end"]),
-            "week_number": tournament_data["date"]["weekNumber"],
+            "week_number": int(tournament_data["date"]["weekNumber"]),
             "format": tournament_data["format"]
         }
 

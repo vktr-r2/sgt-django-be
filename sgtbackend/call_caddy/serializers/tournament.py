@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from models import Tournament
-from helpers.evaluate_major_championship import is_major
+from call_caddy.helpers.evaluate_major_championship import is_major
 
 
 class TournamentSerializer(serializers.ModelSerializer):
@@ -11,8 +11,12 @@ class TournamentSerializer(serializers.ModelSerializer):
 def put_tournament_details_data(response):
         tournament_details = {
             "golf_course": response["course"][0]["courseName"],
-            "location": f"{response["course"][0]["location"]["city"]}, {response["course"][0]["location"]["state"]}, {response["course"][0]["location"]["country"]}",
-            "par": response["course"][0]["parTotal"],
+            "location": {
+                "city": response["course"][0]["location"]["city"],
+                "state": response["course"][0]["location"]["state"],
+                "country": response["course"][0]["location"]["country"]
+                },
+            "par": int(response["course"][0]["parTotal"]),
             "time_zone": response["timeZone"],
             "major_championship": is_major(response["name"])    # is_major helper function evaluates to bool
         }
