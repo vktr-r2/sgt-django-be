@@ -1,6 +1,5 @@
-from models import Tournament
 from datetime import datetime
-from .rapid_api_wrapper import RapidApiWrapperService
+from call_caddy.services.rapid_api_wrapper import RapidApiWrapperService
 
 
 class TournamentCallService:

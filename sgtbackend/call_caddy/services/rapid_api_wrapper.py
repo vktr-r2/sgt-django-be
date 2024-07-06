@@ -1,6 +1,5 @@
 import os
 import requests
-from datetime import datetime
 import logging
 from requests.exceptions import HTTPError, ConnectionError, Timeout, RequestException
 
