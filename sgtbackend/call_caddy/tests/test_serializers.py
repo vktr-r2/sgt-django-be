@@ -1,9 +1,9 @@
 from django.test import TestCase
-from rest_framework.exceptions import ValidationError
 from django.utils.dateparse import parse_datetime
 from unittest.mock import patch, MagicMock
 from call_caddy.serializers.schedule import ScheduleSerializer
 from call_caddy.serializers.tournament import TournamentSerializer
+from call_caddy.helpers.evaluate_major_championship import is_major
 
 class ScheduleSerializerTest(TestCase):
 
@@ -119,7 +119,9 @@ class TournamentSerializerTest(TestCase):
             "major_championship": self.valid_data["major_championship"]
         }
 
+        # Initialize serializer with data that needs to be validated
         serializer = TournamentSerializer(data=tournament_data)
+
         if serializer.is_valid():
             serializer.save()
         else:
@@ -127,3 +129,21 @@ class TournamentSerializerTest(TestCase):
 
         #Ensure the save method was called once
         serializer.save.assert_called_once()
+    
+def test_is_major_is_a_major():
+    assert is_major("Masters Tournament") == True
+    assert is_major("PGA Championship") == True
+    assert is_major("The Open Championship") == True
+    assert is_major("U.S. Open") == True
+
+def test_is_major_not_case_sensitive():
+    assert is_major("masters tournament") == True
+        
+def test_is_major_is_not_a_major():
+    assert is_major("Some random tourney") == False
+
+def test_is_major_empty_string():
+    assert is_major("") == False
+
+def test_is_major_none():
+    assert is_major(None) == False
