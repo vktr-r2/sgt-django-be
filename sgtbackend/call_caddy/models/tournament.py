@@ -1,7 +1,8 @@
 from django.db import models
 
 class Tournament(models.Model):
-    source_id = models.CharField(max_length=10)
+    tournament_id = models.CharField(max_length=10, blank=True, default="")
+    source_id = models.CharField(max_length=50, db_index=True)
     name = models.CharField(max_length=100)
     year = models.IntegerField()
     golf_course = models.CharField(blank=True, max_length=100, default="")
@@ -18,6 +19,9 @@ class Tournament(models.Model):
 
     class Meta:
         db_table = "tournament"
+        indexes = [
+            models.Index(fields=['tournament_id', 'year'], name='tournament_id_year_idx'),
+        ]
 
     def __str__(self):
         return f"{self.name} ({self.year})"

@@ -3,9 +3,10 @@
         "model": "call_caddy.tournament",
         "pk": 1,
         "fields": {
-            "source_id": "011",
+            "tournament_id": "001",
+            "source_id": "64fbe447235ac8857ff92842",
             "name": "THE PLAYERS Championship",
-            "year": "2024",
+            "year": 2024,
             "golf_course": "TPC Sawgrass (THE PLAYERS Stadium Course)",
             "location": {
                 "city": "Tampa Bay",
@@ -15,8 +16,9 @@
             "par": 72,
             "start_date": "2024-03-17T00:00:00Z",
             "end_date": "2024-03-20T23:59:59Z",
-            "week_number": "10",
+            "week_number": 10,
             "time_zone": "America/New_York",
+            "format": "stroke",
             "major_championship": false,
             "created_at": "2024-03-01T00:00:00Z",
             "updated_at": "2024-03-01T00:00:00Z"
@@ -26,9 +28,10 @@
         "model": "call_caddy.tournament",
         "pk": 2,
         "fields": {
-            "source_id": "014",
+            "tournament_id": "002",
+            "source_id": "54fbe447235ac8857ff92853",
             "name": "The Masters Tournament",
-            "year": "2024",
+            "year": 2024,
             "golf_course": "Augusta National Golf Club",
             "location": {
                 "city": "Augusta",
@@ -38,8 +41,9 @@
             "par": 72,
             "start_date": "2024-04-06T00:00:00Z",
             "end_date": "2024-04-09T23:59:59Z",
-            "week_number": "10",
+            "week_number": 10,
             "time_zone": "America/New_York",
+            "format": "Stroke",
             "major_championship": true,
             "created_at": "2024-03-01T00:00:00Z",
             "updated_at": "2024-03-01T00:00:00Z"
