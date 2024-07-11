@@ -14,7 +14,8 @@ class ScheduleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tournament
-        fields = ["tournament_id", "name", "year", "start_date", "end_date", "week_number", "format"]   # These are the only fields we need from /schedule endpoint
+        # These are the only fields we need from /schedule endpoint, rest will be imported from /tournament 
+        fields = ["tournament_id", "name", "year", "start_date", "end_date", "week_number", "format"]
 
     def validate_year(self, value):
         if value <= 2018:
@@ -35,6 +36,8 @@ class ScheduleSerializer(serializers.ModelSerializer):
     @staticmethod
     def insert_schedule_data(response):
         for tournament_data in response.get("schedule", []):    #"schedule" value is a list of tournament objects in the JSON response
+        
+
             try:
                 start_date_ms = int(tournament_data["date"]["start"]["$date"]["$numberLong"])
                 end_date_ms = int(tournament_data["date"]["end"]["$date"]["$numberLong"])
@@ -53,10 +56,16 @@ class ScheduleSerializer(serializers.ModelSerializer):
                     "format": tournament_data["format"]
                 }
 
-                serializer = ScheduleSerializer(data=tournament)
-                if serializer.is_valid():
-                    serializer.save()
+                # Checks if tournament is already in db or not
+                if Tournament.objects.filter(tournament_id=tournament_data["tournId"], year=int((response["year"]))):
+                    print(f"Tournament {tournament_data["tournId"]} for year {response["year"]} already exists.")
                 else:
-                    print(f"Error saving tournament {tournament_data["name"]}: {serializer.errors}")
+                    # If tournament not in db, validate data and save tournament
+                    serializer = ScheduleSerializer(data=tournament)
+                    if serializer.is_valid():
+                        serializer.save()
+                    else:
+                        print(f"Error saving tournament {tournament_data["name"]}: {serializer.errors}")
+
             except (KeyError, ValueError, TypeError) as e:
                 print(f"Error processing tournament data: {e}")
