@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand
 from call_caddy.services.schedule_call import ScheduleCallService
+from call_caddy.services.schedule_data_processor import ScheduleDataProcessor
 from call_caddy.serializers.schedule import ScheduleSerializer
 
 class Command(BaseCommand):
@@ -7,7 +8,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         
-        # Assuming ScheduleCallService returns a response that needs to be serialized
+        # Call /schedule endpoint
         service = ScheduleCallService()
         response = service.get_schedule("1")
 
@@ -18,12 +19,14 @@ class Command(BaseCommand):
         # Process the response with ScheduleSerializerr
         self.stdout.write("Serializing the response data...")
         
-        serializer = ScheduleSerializer()
-        serializer.map_schedule_data(response)
-        
-        """if serializer.is_valid():
-            self.stdout.write(self.style.SUCCESS("Data is valid."))
-            # You can now work with the validated data or save it to the database
-            serializer.save()
+        # Instantiate serializer
+        serializer = ScheduleSerializer(data=response)
+
+        # Validate data
+        if serializer.is_valid():
+            # Instantiate data processor
+            processed_data = ScheduleDataProcessor(serializer.validated_data)
+            # Map and save data
+            processed_data.process_schedule_data()
         else:
-            self.stdout.write(self.style.ERROR(f"Invalid data: {serializer.errors}"))"""
+            self.stdout.write(self.style.ERROR(f"Error in response data: {serializer.errors}"))
