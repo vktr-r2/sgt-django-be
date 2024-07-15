@@ -1,6 +1,8 @@
 from datetime import datetime
+import logging
 from call_caddy.services.rapid_api_wrapper import RapidApiWrapperService
 
+logger = logging.getLogger("call_caddy")
 
 class ScheduleCallService:
 

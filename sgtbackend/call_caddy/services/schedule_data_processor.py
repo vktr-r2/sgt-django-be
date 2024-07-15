@@ -1,8 +1,5 @@
-import datetime
 from call_caddy.models.tournament import Tournament
-from call_caddy.serializers.schedule import ScheduleSerializer
 from call_caddy.helpers.format_date import format_date
-
 
 class ScheduleDataProcessor:
 
@@ -36,4 +33,4 @@ class ScheduleDataProcessor:
                     print(f"Tournament {tournament['name']} saved successfully.")
 
             except (KeyError, ValueError, TypeError) as e:
-                print(f"Error processing tournament data: {e}")
+                print(f"Error processing schedule data: {e}")
