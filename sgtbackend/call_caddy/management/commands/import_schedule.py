@@ -4,7 +4,7 @@ from call_caddy.services.schedule_data_processor import ScheduleDataProcessor
 from call_caddy.serializers.schedule import ScheduleSerializer
 
 class Command(BaseCommand):
-    help = "Calls /schedule endpoint, serializer response, and inserts data into DB"
+    help = "(Args: org_id) Command calls /schedule endpoint, validates response, and inserts data into DB"
 
     def handle(self, *args, **kwargs):
         
@@ -16,8 +16,7 @@ class Command(BaseCommand):
             self.stdout.write(self.style.ERROR("No data received from ScheduleCallService."))
             return
 
-        # Process the response with ScheduleSerializerr
-        self.stdout.write("Serializing the response data...")
+        self.stdout.write("Validating the schedule response data...")
         
         # Instantiate serializer
         serializer = ScheduleSerializer(data=response)
@@ -28,5 +27,6 @@ class Command(BaseCommand):
             processed_data = ScheduleDataProcessor(serializer.validated_data)
             # Map and save data
             processed_data.process_schedule_data()
+            self.stdout.write("Schedule imported")
         else:
-            self.stdout.write(self.style.ERROR(f"Error in response data: {serializer.errors}"))
+            self.stdout.write(self.style.ERROR(f"Error in /schedule response data: {serializer.errors}"))
