@@ -18,13 +18,13 @@ class TournamentSerializer(serializers.ModelSerializer):
     # custom validator
     def validate(self, data):
         try:
-            if not isinstance(data["_id"], str):
+            if not isinstance(data["_id"], dict):
                 raise ValidationError("_id is not in dict format")
             if not isinstance(data["courses"][0]["courseName"], str):
                 raise ValidationError("courseName is not string format")
             if not isinstance(data["courses"][0]["location"]["city"], str):
                 raise ValidationError("City is not string format")
-            if not isinstance(data["courses"][0]["location"]["state"], str):
+            if not isinstance(data["courses"][0]["location"]["state"], str) and data["courses"][0]["location"]["state"] != None:
                 raise ValidationError("State is not string format")
             if not isinstance(data["courses"][0]["location"]["country"], str):
                 raise ValidationError("Country is not string format")
