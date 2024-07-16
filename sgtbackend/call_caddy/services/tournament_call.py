@@ -12,5 +12,5 @@ class TournamentCallService:
     # Calls the tournament endpoint to GET data for a specific tourney
     def get_tournament(self, org_id, tourn_id):
         current_year = str(datetime.now().year)
-        params = {"orgID": org_id, "tournId": tourn_id, "year": current_year}
+        params = {"orgId": org_id, "tournId": tourn_id, "year": current_year}
         return self.api_wrapper.make_request("tournament", params=params)

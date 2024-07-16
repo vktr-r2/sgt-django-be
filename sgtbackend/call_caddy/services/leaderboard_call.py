@@ -10,5 +10,5 @@ class LeaderboardCallService:
     # Calls the tour schedule endpoint to GET leaderboard data for the tourney
     def get_leaderboard(self, org_id, tourn_id):
         current_year = str(datetime.now().year)
-        params = {"orgID": org_id, "tourn_id": tourn_id, "year": current_year}
+        params = {"orgId": org_id, "tournId": tourn_id, "year": current_year}
         return self.api_wrapper.make_request("leaderboard", params=params)
