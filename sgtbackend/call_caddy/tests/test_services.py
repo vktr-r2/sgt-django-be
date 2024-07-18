@@ -154,7 +154,7 @@ class TestTournamentCallService(unittest.TestCase):
 
         # Mock successful tourney GET
         mocker.get(
-            f"https://live-golf-data.p.rapidapi.com/tournament?orgID=1&year={current_year}&tourn_id={tourn_id}",
+            f"https://live-golf-data.p.rapidapi.com/tournament?orgID=1&year={current_year}&tournId={tourn_id}",
             json=mock_tourney,
             status_code=200,
         )
@@ -170,7 +170,7 @@ class TestTournamentCallService(unittest.TestCase):
         current_year = str(datetime.now().year)
         tourn_id = "475"
         mocker.get(
-            f"https://live-golf-data.p.rapidapi.com/tournament?orgID=1&year={current_year}&tourn_id={tourn_id}",
+            f"https://live-golf-data.p.rapidapi.com/tournament?orgID=1&year={current_year}&tournId={tourn_id}",
             status_code=404,
         )
 
@@ -182,7 +182,7 @@ class TestTournamentCallService(unittest.TestCase):
         current_year = str(datetime.now().year)
         tourn_id = "475"
         mocker.get(
-            f"https://live-golf-data.p.rapidapi.com/tournament?orgID=1&year={current_year}&tourn_id={tourn_id}",
+            f"https://live-golf-data.p.rapidapi.com/tournament?orgID=1&year={current_year}&tournId={tourn_id}",
             status_code=404,
         )
 
@@ -217,7 +217,7 @@ class TestLeaderboardCallService(unittest.TestCase):
 
         # Mock successful tourney GET
         mocker.get(
-            f"https://live-golf-data.p.rapidapi.com/leaderboard?orgID=1&year={current_year}&tourn_id={tourn_id}",
+            f"https://live-golf-data.p.rapidapi.com/leaderboard?orgID=1&year={current_year}&tournId={tourn_id}",
             json=mock_leaderboard,
             status_code=200,
         )
@@ -233,7 +233,7 @@ class TestLeaderboardCallService(unittest.TestCase):
         current_year = str(datetime.now().year)
         tourn_id = "475"
         mocker.get(
-            f"https://live-golf-data.p.rapidapi.com/leaderboard?orgID=1&year={current_year}&tourn_id={tourn_id}",
+            f"https://live-golf-data.p.rapidapi.com/leaderboard?orgID=1&year={current_year}&tournId={tourn_id}",
             status_code=404,
         )
 
@@ -245,7 +245,7 @@ class TestLeaderboardCallService(unittest.TestCase):
         current_year = str(datetime.now().year)
         tourn_id = "475"
         mocker.get(
-            f"https://live-golf-data.p.rapidapi.com/leaderboard?orgID=1&year={current_year}&tourn_id={tourn_id}",
+            f"https://live-golf-data.p.rapidapi.com/leaderboard?orgID=1&year={current_year}&tournId={tourn_id}",
             status_code=404,
         )
 
