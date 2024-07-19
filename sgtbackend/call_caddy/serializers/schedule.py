@@ -7,12 +7,11 @@ from call_caddy.helpers.format_date import format_date
 
 logger = logging.getLogger("call_caddy")
 
-class ScheduleSerializer(serializers.ModelSerializer):
+class ScheduleSerializer(serializers.Serializer):
     year = serializers.CharField()
     schedule = serializers.ListField()
 
     class Meta:
-        model = Tournament
         # /schedule endpoint gets just basics details of each tournament.  We get rest of tournament data from /tournament
         fields = ["schedule", "year"]
 

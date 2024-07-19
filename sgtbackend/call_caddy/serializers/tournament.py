@@ -5,13 +5,12 @@ from call_caddy.models import Tournament
 
 logger = logging.getLogger("call_caddy")
 
-class TournamentSerializer(serializers.ModelSerializer):
+class TournamentSerializer(serializers.Serializer):
     _id = serializers.DictField()
     courses = serializers.ListField()
     timeZone = serializers.CharField()
 
     class Meta:
-        model = Tournament
         # /tournament endpoint returns tournament details, rest of tournament data should already be imported from /schedule
         fields = ["_id", "courses", "timeZone"]
 
