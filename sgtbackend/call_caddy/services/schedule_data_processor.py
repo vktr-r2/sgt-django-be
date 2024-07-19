@@ -20,7 +20,7 @@ class ScheduleDataProcessor:
                     "year": int(self.validated_data["year"]),
                     "start_date": start_date,
                     "end_date": end_date,
-                    "week_number": tournament_data["date"]["weekNumber"],
+                    "week_number": int(tournament_data["date"]["weekNumber"]),
                     "format": tournament_data["format"]
                 }
 
