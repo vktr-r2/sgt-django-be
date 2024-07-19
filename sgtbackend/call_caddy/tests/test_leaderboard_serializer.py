@@ -1,5 +1,5 @@
 from django.test import TestCase
-from call_caddy.serializers.leaderboard import LeaderboardSerializer
+from call_caddy.serializers.leaderboard import LeaderboardSerializer, LeaderboardRowSerializer, RoundsSerializer
 
 
 class LeaderboardSerializerTest(TestCase):
@@ -45,10 +45,16 @@ class LeaderboardSerializerTest(TestCase):
 
     # Test data validation
     def test_leaderboard_serializer_is_valid(self):
-
-        # Initialize serializer with data that needs to be validated
         serializer = LeaderboardSerializer(data=self.valid_data)
-        self.assertTrue(serializer.is_valid())
+        self.assertTrue(serializer.is_valid(), msg=serializer.errors)
+
+    def test_leaderboard_row_serializer_is_valid(self):
+        serializer = LeaderboardRowSerializer(data=self.valid_data["leaderboardRows"][0])
+        self.assertTrue(serializer.is_valid(), msg=serializer.errors)
+
+    def test_rounds_serializer_is_valid(self):
+        serializer = RoundsSerializer(data=self.valid_data["leaderboardRows"][0]["rounds"][0])
+        self.assertTrue(serializer.is_valid(), msg=serializer.errors)
 
     """# Mock saving the data in a db
     @patch("call_caddy.serializers.schedule.ScheduleSerializer.save", MagicMock(name="save"))
