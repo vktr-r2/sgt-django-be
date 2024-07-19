@@ -33,7 +33,7 @@ class ScheduleSerializerTest(TestCase):
 
         # Initialize serializer with data that needs to be validated
         serializer = ScheduleSerializer(data=self.valid_data)
-        self.assertTrue(serializer.is_valid())
+        self.assertTrue(serializer.is_valid(), msg=serializer.errors)
 
     # Mock saving the data in a db
     @patch('call_caddy.serializers.schedule.ScheduleSerializer.save', MagicMock(name="save"))
