@@ -1,7 +1,6 @@
 import os
 import unittest
 from unittest.mock import patch
-import requests
 import requests_mock
 from datetime import datetime
 from call_caddy.services.tournament_call import TournamentCallService

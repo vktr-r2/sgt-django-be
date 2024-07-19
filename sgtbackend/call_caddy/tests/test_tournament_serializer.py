@@ -1,7 +1,6 @@
 from django.test import TestCase
 from unittest.mock import patch, MagicMock
 from call_caddy.serializers.tournament import TournamentSerializer
-from call_caddy.helpers.evaluate_major_championship import is_major
 
 class TournamentSerializerTest(TestCase):
 
