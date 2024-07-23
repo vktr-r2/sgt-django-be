@@ -1,18 +1,43 @@
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 import logging
-from call_caddy.models import Tournament
 
 logger = logging.getLogger("call_caddy")
+
+class PlayerSerializer(serializers.Serializer):
+    lastName = serializers.CharField()
+    firstName = serializers.CharField()
+    playerId = serializers.CharField()
+
+    class Meta:
+        # players is a list returned from the /tournament response
+        fields = ["lastName", "firstName", "playerId"]
+    
+    def validate(self, data):
+        try:
+            if not isinstance(data["lastName"], str):
+                raise ValidationError("lastName is not in string format")
+            if not isinstance(data["firstName"], str):
+                raise ValidationError("firstName is not in string format")
+            if not isinstance(data["playerId"], str):
+                raise ValidationError("playerId is not in string format")
+
+        except ValidationError as e:
+            print(f"Validation error: {e}")
+            logger.error(f"Validation error: {e}")
+            raise e
+        return data
 
 class TournamentSerializer(serializers.Serializer):
     _id = serializers.DictField()
     courses = serializers.ListField()
     timeZone = serializers.CharField()
+    players = serializers.ListField(child = PlayerSerializer())
+
 
     class Meta:
-        # /tournament endpoint returns tournament details, rest of tournament data should already be imported from /schedule
-        fields = ["_id", "courses", "timeZone"]
+        # /tournament endpoint returns tournament details and players, rest of tournament data should already be imported from /schedule
+        fields = ["_id", "courses", "timeZone", "players"]
 
     # custom validator
     def validate(self, data):
@@ -36,3 +61,6 @@ class TournamentSerializer(serializers.Serializer):
             logger.error(f"Validation error: {e}")
             raise e
         return data
+
+
+    
