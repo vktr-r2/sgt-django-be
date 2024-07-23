@@ -6,6 +6,7 @@ class Golfer(models.Model):
     source_id = models.CharField(max_length=50, db_index=True)
     f_name = models.CharField(max_length=32)
     l_name = models.CharField(max_length=32)
+    last_active_tourney = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
